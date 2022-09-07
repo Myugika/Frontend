@@ -1,1 +1,3 @@
-console.log(4 > 3 && 10 > 8, '가방' < '나무' || false);
+console.log(today)
+console.log(today.getFullYear)
+console.log(today.getMonth)
