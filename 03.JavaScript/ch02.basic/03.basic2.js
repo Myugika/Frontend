@@ -25,5 +25,5 @@ console.log(52+'37', 21+31+'37');
 console.log(1+true, true+'bool');
 
 // 일치 연산자
-console.log()
-console.log()
+console.log(1 == 1.0, 1 === 1.0);
+console.log(1 == '1', 1 === '1', 1 !== '1');
