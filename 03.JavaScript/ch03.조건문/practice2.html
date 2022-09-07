@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <script>
+        function yyyear() {
+            const year = Number(document.getElementById('year').value);
+            const res = document.getElementById('result');
+            if (year % 400 == 0) {
+                res.innerHTML = '<h4>윤년</h4>';
+            } else if (year % 100 == 0) {
+                res.innerHTML = '<h4>평년</h4>';
+            } else if (year % 4 == 0) {
+                res.innerHTML = '<h4>윤년</h4>';
+            } else {res.innerHTML = '<h4>평년</h4>';}
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="year" placeholder="연도 입력">
+    <button onclick="yyyear()">확인</button>
+    <br>
+    <p id="result"></p>
+</body>
+</html>

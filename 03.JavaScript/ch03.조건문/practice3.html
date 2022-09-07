@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+    <script>
+        function testScore() {
+            const score = Number(document.getElementById('score').value);
+            const res = document.getElementById('result');
+            if (score > 100) {
+                res.innerHTML = '<h4/>잘못된 입력'
+            } else if (score < 0) {
+                res.innerHTML = '<h4/>잘못된 입력'
+            } else if (score >= 90) {
+                res.innerHTML = '<h4>A</h4>';
+            } else if (score >= 80) {
+                res.innerHTML = '<h4>B</h4>';
+            } else if (score >= 70) {
+                res.innerHTML = '<h4>C</h4>';
+            } else if (score >= 60) {
+                res.innerHTML = '<h4>D</h4>'; 
+            } else {res.innerHTML = '<h4>F</h4>';}
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="score" placeholder="점수를 입력하세요.">
+    <button onclick="testScore()">확인</button>
+    <br>
+    <p id="result"></p>
+</body>
+</html>

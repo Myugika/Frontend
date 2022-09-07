@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Q1</title>
+    <script>
+        function hamsu() {
+            const birth = Number(document.getElementById('birth').value);
+            const res = document.getElementById('result');
+            const today = new Date();
+            const yeon = Number(today.getFullYear() - parseInt(birth/10000))
+            if (Number(birth%10000) < Number(today.getMonth()*100) + Number(today.getDate())) {
+                res.innerHTML = yeon + 1} else {
+                res.innerHTML = yeon
+                }
+        }
+    </script>
 </head>
 <body>
-    <input type="text" id="year">
-    <input type="text" id="month">
-    <input type="text" id="day">
-    <button onclick="evenOdd()">확인</button>
+    <input type="text" id="birth" placeholder="생년월일 입력">
+    <button onclick="hamsu()">확인</button>
     <br>
     <p id="result"></p>
 </body>
 </html>
+
